@@ -49,3 +49,35 @@ As of Spring 5, it is encouraged to use WebClient for new projects and migrate a
 
 
 
+create your own json-server and pust some sample data in it. 
+ Steps to Create and Run JSON Server:
+Install Node.js & npm
+Make sure Node.js and npm are installed. You can check by running:
+node -v
+npm -v
+Install JSON Server
+Run the following command to install it globally:
+
+npm install -g json-server
+
+
+Create a db.json File
+Create a db.json file with some sample data:
+
+{
+  "posts": [{ "id": 1, "title": "Hello World", "author": "John Doe" }]
+}
+Run JSON Server
+Start the server with:
+
+json-server --watch db.json
+Access the API
+Your API is now running on http://localhost:3000. Example:
+
+GET http://localhost:3000/posts
+Stop the Server
+Press Ctrl + C to stop the server.
+
+That's it! You now have a fake REST API running with JSON Server. 🎉
+
+
