@@ -1,0 +1,51 @@
+HTTP Clients in Spring: WebClient, RestClient, and RestTemplate
+This README provides an overview of the three most common HTTP clients in Spring for making API requests:
+WebClient, RestClient, and RestTemplate.
+
+1. WebClient (Preferred for New Projects)
+WebClient is a modern, non-blocking, and reactive HTTP client introduced in Spring 5 as part of the Spring
+WebFlux module. It supports both synchronous and asynchronous requests and integrates seamlessly with reactive
+ programming using Reactive Streams.
+
+Key Features:
+Supports both synchronous and asynchronous requests.
+Designed to work with reactive programming (i.e., Spring WebFlux).
+Supports modern HTTP features like HTTP/2 and WebSockets.
+Can handle high-concurrency and scalable applications.
+
+2. RestClient (Part of Spring 5)
+RestClient is another HTTP client introduced in Spring 5 that is part of the Spring WebFlux framework. It is built on top of the Apache HttpClient
+and is a more modern alternative to RestTemplate. Like WebClient, it supports both synchronous and asynchronous requests.
+
+Key Features:
+Built on Apache HttpClient.
+Supports both synchronous and asynchronous requests.
+Built for high-concurrency applications with non-blocking capabilities.
+Ideal for reactive applications, but not as widely used as WebClient.
+
+
+3. RestTemplate (Legacy HTTP Client)
+RestTemplate is the classic HTTP client provided by Spring and has been in use for many years. It is synchronous and blocking,
+meaning it waits for the response before continuing with the execution of the program.
+
+Key Features:
+Synchronous and blocking behavior.
+Simpler and more familiar to developers who have been using Spring for a while.
+Ideal for simpler, sequential HTTP requests.
+Deprecated in Spring 5 in favor of WebClient.
+
+
+When to Use Each:
+WebClient: Recommended for new applications, especially if you need asynchronous, non-blocking HTTP communication. Ideal for reactive systems.
+RestClient: Suitable for reactive programming, but not as widely used or popular as WebClient. If you're already using RestClient in your project,
+ it can serve your needs for asynchronous communication.
+RestTemplate: Use RestTemplate for legacy applications or simple, synchronous HTTP requests. However, since it’s deprecated,
+ it’s recommended to migrate to WebClient in new projects.
+Conclusion:
+WebClient is the preferred option for modern applications, especially those using Spring WebFlux or requiring asynchronous, non-blocking requests.
+RestClient is a suitable option for reactive programming but may not be as commonly used as WebClient.
+RestTemplate is legacy, synchronous, and blocking, but is still used in existing applications.
+As of Spring 5, it is encouraged to use WebClient for new projects and migrate away from RestTemplate for asynchronous, high-concurrency, and reactive needs.
+
+
+
