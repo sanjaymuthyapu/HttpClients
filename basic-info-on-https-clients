@@ -80,4 +80,35 @@ Press Ctrl + C to stop the server.
 
 That's it! You now have a fake REST API running with JSON Server. 🎉
 
+Here is the sample data in db.json
 
+{
+  "todos": [
+    {
+      "id": "143",
+      "userId": 143,
+      "title": "Salaar devartha raiser",
+      "body": null
+    }
+  ],
+  "comments": [
+    {
+      "postId": 1,
+      "id": "4",
+      "name": "alias odio sit",
+      "email": "Lew@alysha.tv",
+      "body": "Comment-1"
+    }
+  ],
+  "profile": [
+    {
+      "id": "123",
+      "name": "John Doe",
+      "age": "30",
+      "mailId": "john.doe@example.com",
+      "phone": "123-456-7890",
+      "location": "New York",
+      "rating": "5"
+    }
+  ]
+}
